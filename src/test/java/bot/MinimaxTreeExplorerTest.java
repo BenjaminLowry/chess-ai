@@ -4,7 +4,6 @@ import functionality.ChessGame;
 import functionality.TeamColor;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -48,13 +47,13 @@ public class MinimaxTreeExplorerTest {
             public List<ChessGame> nextStates(ChessGame state) {
                 List<ChessGame> nextStates = delegate.nextStates(state);
                 stateCount += 1;
-                System.out.println(stateCount);
                 return nextStates;
             }
         };
 
         ChessGame startGame = new ChessGame(TEST_FILE_DIR + "notCheckmateExample2.txt");
-        MinimaxTreeExplorer<ChessGame> mt = new MinimaxTreeExplorer<>(new NaiveUtilityEvaluator(), gameEnum, TeamColor.WHITE, startGame, 4);
+        MinimaxTreeExplorer<ChessGame> mt = new MinimaxTreeExplorer<>(new NaiveUtilityEvaluator(),
+                gameEnum, TeamColor.WHITE, startGame, 4);
         System.out.println(mt.getNextBestNode().getBoardState());
     }
 
