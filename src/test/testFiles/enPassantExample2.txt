@@ -1,0 +1,8 @@
+rb nb bb qb kb bb -- rb
+pb pb pb pb -- pb pb pb
+-- -- -- -- -- -- -- --
+-- -- -- -- pw -- -- --
+-- -- -- qw nb -- -- --
+-- -- -- -- -- nw -- --
+pw pw pw -- -- pw pw pw
+rw nw bw -- kw bw -- rw
