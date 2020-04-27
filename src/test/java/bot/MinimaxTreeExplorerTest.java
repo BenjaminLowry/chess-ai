@@ -10,7 +10,6 @@ import static org.junit.Assert.assertEquals;
 
 public class MinimaxTreeExplorerTest {
     private static final String TEST_FILE_DIR = "src/test/testFiles/";
-    private static final String STANDARD_BOARD_PATH = TEST_FILE_DIR + "defaultLayout.txt";
 
     @Test
     public void testGetNextBestMoveSimple() {
@@ -41,12 +40,9 @@ public class MinimaxTreeExplorerTest {
     public void testTest() {
         ChessDelegate delegate = new ChessDelegate();
         MoveEnumerator<ChessGame> gameEnum = new MoveEnumerator<>() {
-            private int stateCount = 0;
-
             @Override
             public List<ChessGame> nextStates(ChessGame state) {
                 List<ChessGame> nextStates = delegate.nextStates(state);
-                stateCount += 1;
                 return nextStates;
             }
         };
